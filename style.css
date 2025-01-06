@@ -1,0 +1,109 @@
+body {
+    font-family: 'Borel', cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f7e9f1; /* Fondo rosa suave */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.borel-regular {
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffb6c1;
+    color: #fff;
+}
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+header p {
+    font-size: 1.2em;
+}
+/* Sección de Presentación */
+#about {
+    text-align: center;
+    padding: 40px;
+}
+#about img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+/* Proyectos */
+#projects {
+    background-color: #fdf3f5;
+    padding: 40px;
+    text-align: center;
+}
+.project-card {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+/* Habilidades */
+#skills {
+    text-align: center;
+    padding: 40px;
+}
+.skills-icons span {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #ffb6c1;
+    border-radius: 5px;
+    color: #fff;
+}
+/* Contacto */
+#contact form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+#contact label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+#contact input, #contact textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#contact button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffb6c1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#contact button:hover {
+    background-color: #ff7a92;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffb6c1;
+    color: #fff;
+    font-size: 0.9em;
+}
