@@ -7,62 +7,99 @@
     <link rel="stylesheet" href="/style.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    
     <header>
-        <h1>¡Hola! Soy Araceli</h1>
-        <p>Desarrolladora Web Junior</p>
+        <h1>¡Hola! Soy Araceli, una apasionada del Frontend</h1>
+        <p>Desarrolladora Web Junior que vive y respira HTML, CSS y JavaScript</p>
     </header>
 
     <section id="about">
-        <h2>¿Quien es Araceli?</h2>
-        <p>Ella es una desarrolladora divertida y sin miedo a los desafíos, que le encanta aprender y crear experiencias interactivas. Si bien soy una desarrolladora junior con poca experiencia soy una entuciasta por lo que hago, cada proyecto que ha llegado a mi fue dessarrollado con mucha atencion y pasion.</p>
+        <h2>¿Quién es Araceli?</h2>
+        <p>Soy una desarrolladora divertida y sin miedo a los desafíos, que le encanta aprender y crear experiencias interactivas. Aunque soy una desarrolladora junior, cada proyecto que he desarrollado ha sido con mucha atención y pasión. <strong>Me fascina el frontend porque me permite dar vida a las ideas con HTML, CSS y JavaScript, creando interfaces de usuario atractivas y funcionales.</strong></p>
         <img src="tu-imagen.jpg" alt="Foto de Araceli">
     </section>
 
-    <section id="projects">
-        <h2>Proyectos Destacados</h2>
+    <section id="frontend-projects">
+        <h2>Proyectos de Frontend Destacados</h2>
         <div class="project-card">
-            <h3>Landing Page "Justina by Nails"</h3>
-            <p>Esta es una paguina de aterrizaje para un salon de manicura</p>
+            <img src="proyecto1.png" alt="Proyecto 1">
+            <h3>Nombre del Proyecto 1</h3>
+            <p>Descripción breve del proyecto y las tecnologías frontend utilizadas.</p>
         </div>
         <div class="project-card">
-            <h3>Paguina Web "BerPlast"</h3>
-            <p>Cree desde 0 una pagina web para una industria de bolsas plasticas</p>
+            <img src="proyecto2.png" alt="Proyecto 2">
+            <h3>Nombre del Proyecto 2</h3>
+            <p>Descripción breve del proyecto y las tecnologías frontend utilizadas.</p>
         </div>
-        <!--Agregar más proyectos-->
+        <!-- Agrega más proyectos -->
     </section>
 
     <section id="skills">
         <h2>Habilidades</h2>
         <div class="skills-icons">
-            <!-- Ejemplo de íconos -->
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>React Js</span>
+            <span><i class="fab fa-html5"></i> HTML</span>
+            <span><i class="fab fa-css3-alt"></i> CSS</span>
+            <span><i class="fab fa-js"></i> JavaScript</span>
+            <span><i class="fab fa-react"></i> React Js</span>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contacto</h2>
-        <form action="#" method="post">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+        <div class="chat-container">
+            <div class="chat-bubble">
+                <p>Hola, ¿cuál es tu nombre?</p>
+                <input type="text" id="chat-name" required>
+            </div>
+            <div class="chat-bubble">
+                <p>¿Cuál es tu correo electrónico?</p>
+                <input type="email" id="chat-email" required>
+            </div>
+            <div class="chat-bubble">
+                <p>Escribe tu mensaje:</p>
+                <textarea id="chat-message" required></textarea>
+            </div>
+            <button id="chat-submit" onclick="submitChat()">Enviar</button>
+            <p id="chat-status"></p>
+        </div>
+    <script>
+        function submitChat() {
+            var name = document.getElementById('chat-name').value;
+            var email = document.getElementById('chat-email').value;
+            var message = document.getElementById('chat-message').value;
+            var status = document.getElementById('chat-status');
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
+            if (name && email && message) {
+                status.textContent = "¡Gracias " + name + "! Tu mensaje ha sido enviado.";
+                setTimeout(function() { location.reload();
+            }, 2000); 
+                }  else {
+                status.textContent = "Por favor, completa todos los campos.";
+            }
+        }
+    </script>    
     </section>
-
+    
     <footer>
-        <p>&copy; 2024 Araceli - Desarrolladora Web Junior</p>
+        <p>&copy; 2025 Araceli - Desarrolladora Web</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/learning/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AraMaite" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/araceli.maite/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
+    
 </body>
 </html>
